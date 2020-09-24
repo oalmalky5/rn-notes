@@ -48,8 +48,8 @@ this is up to you .. naming the ```action``` proprites is completely up to the u
 
 # Handling Text input in RN
 
-for showing a text input we user the ```TextInput``` from the react native library
-it has no styles so here is a basic style to make it better 
+for showing a text input we use the ```TextInput``` from the react native library ..
+the input by default has no styles so here is a basic style to make it look better and more like a regular input bar 
 ```
 const styles = StyleSheet.create({
     input: {
@@ -60,9 +60,9 @@ const styles = StyleSheet.create({
 }) 
 ```
 
-```autoCapitlize = none``` prop prevents android or ios from captlizing any input given to the textipnut 
+the ```autoCapitlize = none``` prop prevents android or ios from auto captlizing any input given to the textipnut 
 
-```autoCorrect = {false} ``` prevents ios or android from auto correcting the value given to the textipnut
+the ```autoCorrect = {false} ``` prevents ios or android from auto correcting the value given to the textipnut
 
 ```
 const TextScreen = () => {
@@ -82,6 +82,6 @@ const TextScreen = () => {
  
 ```
 
-everytime there is a text innput your pretty much going to utlilze this pattern 
+everytime there is a text input your pretty much going to utlilze the above pattern 
 you will add state variable  
 you will add the ```onChangeText``` prop and give it a callback function the accept whatever value you are setting the state to   
