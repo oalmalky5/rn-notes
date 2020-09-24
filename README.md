@@ -44,7 +44,44 @@ communinty connvinction is that ```action```  takes the proprities
 ```type``` which means ```thingToChange```  
 ```payload``` which means  ```amount to change by``` 
 
-this is up to you .. naming the ```action``` proprites is completely up to the use 
+this is up to you .. naming the ```action``` proprites is completely up to the useer 
 
-# Handling Text input
+# Handling Text input in RN
 
+for showing a text input we user the ```TextInput``` from the react native library
+it has no styles so here is a basic style to make it better 
+```
+const styles = StyleSheet.create({
+    input: {
+        margin: 25,
+        borderColor: 'black',
+        borderWidth: 1
+    }
+}) 
+```
+
+```autoCapitlize = none``` prop prevents android or ios from captlizing any input given to the textipnut 
+
+```autoCorrect = {false} ``` prevents ios or android from auto correcting the value given to the textipnut
+
+```
+const TextScreen = () => {
+    const [name, setName] = useState('')
+    return <View>
+        <Text>Enter Name:</Text>
+        <TextInput 
+            style={styles.input}
+            autoCapitalize="none" 
+            autoCorrect={false}
+            value={name}
+            onChangeText={(newValue) => setName(newValue)}
+        />
+        <Text>My name is {name}</Text>
+    </View>
+} 
+ 
+```
+
+everytime there is a text innput your pretty much going to utlilze this pattern 
+you will add state variable  
+you will add the ```onChangeText``` prop and give it a callback function the accept whatever value you are setting the state to   
