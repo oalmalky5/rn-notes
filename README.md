@@ -8,7 +8,7 @@ import ```{useReducer}``` insted of ```{useState}```
 
 after setting the ```useReducer``` method, we need need to define our reducer function 
 
-```const reducer = (state) => {} ```
+```const reducer = (state, acttion) => {} ```
 
 it is better if you define the reducer function outside of the component that has the ```useReducer``` method 
 the first arguement is ```state``` and the second arguuement is the update or the change that  we want to happen to our intial state
@@ -37,4 +37,14 @@ then we overwtire the existing proprites with what we want
 this will allow us to not make any changes directly to the intital ```state```  
 
 
-```disp``` is responsible for
+```dispatch``` is responsible for running the reducer and making changes 
+
+
+communinty connvinction is that ```action```  takes the proprities 
+```type``` which means ```thingToChange```  
+```payload``` which means  ```amount to change by``` 
+
+this is up to you .. naming the ```action``` proprites is completely up to the use 
+
+# Handling Text input
+
