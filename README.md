@@ -26,7 +26,7 @@ and it also takes the amount that we want to change by
 
 one important thing is that we never change the first arguement ```state``` directly   
 so we never do 
-``` state.somehting = something
+``` state.somehting = something ```
 
 if we want to change a property inside the state object
 we want to rebuild that entire state object from scratch woth changes that we want 
